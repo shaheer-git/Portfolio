@@ -1,0 +1,68 @@
+.intro-container {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F6F1D1;
+}
+
+.intro-msg {
+    width: 50%;
+    height: 200px;
+    font: icon;
+    text-transform: lowercase;
+}
+
+.intro-msg::first-letter {
+    text-transform: uppercase;
+}
+
+.intro-msg {
+    overflow: hidden;
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    text-wrap: wrap;
+    animation: typing 3s steps(40) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Style for an image */
+img {
+    max-width: 100%;
+    /* Ensure images don't exceed their container width */
+    height: auto;
+    /* Maintain aspect ratio when resizing */
+    display: block;
+    /* Remove extra space below inline images */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    filter: brightness(0.8);
+}
+
+/* Add a border to the image */
+img.with-border {
+    border: 2px solid #333;
+    border-radius: 4px;
+    /* Add a rounded border if desired */
+}
+
+/* Add a shadow to the image */
+img.with-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a grayscale filter to the image on hover */
+img:hover {
+    filter: grayscale(100%);
+}
