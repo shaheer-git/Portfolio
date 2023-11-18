@@ -1,42 +1,36 @@
 .intro-container {
-    position: absolute;
-    top: 20%;
-    right: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     color: #F6F1D1;
+    width: 100%;
+    height: 80vh;
 }
 
-.intro-msg {
-    width: 50%;
-    height: 200px;
-    font: icon;
-    text-transform: lowercase;
-}
-
-.intro-msg::first-letter {
+.intro-msg-container {
+    display: flex;
     text-transform: uppercase;
+    font-size: x-large;
+    align-items: center;
+    flex-direction: column;
 }
 
 .intro-msg {
-    overflow: hidden;
-    border-right: 2px solid #000;
-    white-space: nowrap;
-    text-wrap: wrap;
-    animation: typing 3s steps(40) infinite;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
+.intro-msg > p {
+    color: #01d293;
 }
 
+.intro-msg ~ p {
+    font-size: small;
+    width: 500px;
+    line-height: 30px;
+    opacity: 0.8;
+}
 /* Style for an image */
 img {
     max-width: 100%;
@@ -63,6 +57,37 @@ img.with-shadow {
 }
 
 /* Add a grayscale filter to the image on hover */
-img:hover {
-    filter: grayscale(100%);
+.intro-animation {
+    height: 40px;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.intro-animation>div>div {
+    padding: 0.25rem 0.75rem;
+    height: 2.81rem;
+    margin-bottom: 2.81rem;
+    display: inline-block;
+}
+
+.intro-animation div:first-child {
+    animation: text-animation 8s infinite;
+}
+
+@keyframes text-animation {
+    25% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -5.62rem;
+    }
+
+    75% {
+        margin-top: -5.62rem;
+    }
+
+    100% {
+        margin-top: 0;
+    }
 }
