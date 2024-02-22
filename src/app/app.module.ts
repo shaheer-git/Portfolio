@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MyPicComponent } from './my-pic/my-pic.component';
 import { AboutComponent } from './about/about.component';
+import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MyPicComponent,
-    AboutComponent
+    AboutComponent,
+    SideNavBarComponent
   ],
   imports: [
     BrowserModule
